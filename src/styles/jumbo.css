@@ -1,0 +1,66 @@
+/* Estilos generales del contenedor */
+.jumbo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Mantener altura completa */
+  padding: 100px 20px 0;
+  flex-direction: column;
+  background: none; /* Asegurar que no haya fondo */
+}
+
+/* Contenido del Jumbo */
+.jumbo-content {
+  text-align: center;
+  color: white;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+/* Barra luminosa */
+.light-bar {
+  width: 400px;
+  height: 2px;
+  background-color: #48cfff;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 100px 200px rgba(72, 207, 255, 1),
+              0 50px 50px rgba(72, 207, 255, 0.8),
+              0 20px 40px rgba(72, 207, 255, 0.5);
+  border-radius: 2px;
+}
+
+.jumbo-content h1 {
+  font-size: 4.2rem;
+  margin: 0;
+  color: #d1d5db;
+}
+
+.jumbo-content h2 {
+  font-size: 2rem;
+  margin: 25px 0 10px 0;
+  color: #f3f4f6;
+}
+
+.jumbo-content p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 28px auto;
+  color: #a9afba;
+}
+
+/* Divider */
+.divider {
+  width: 60%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 50px auto 0;
+}
+
+@media (max-width: 768px) {
+  .jumbo-container {
+      padding-top: 80px; /* Ajusta el valor según la altura del navbar en pantallas más pequeñas */
+  }
+}

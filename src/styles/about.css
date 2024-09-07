@@ -1,0 +1,66 @@
+/* Sección de About */
+.about-section {
+  padding: 60px 20px; /* Ajusta el espacio entre los componentes */
+  background: none; /* Asegura que no tenga fondo propio */
+}
+
+/* Contenedor principal que alinea el texto y la imagen */
+.about-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+/* Estilos para el texto */
+.about-text {
+  flex: 1;
+  max-width: 650px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-right: 5px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #d1d5db;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #a9afba;
+  text-align: justify;
+}
+
+.about-text strong {
+  color: #ffffff;
+}
+
+/* Estilos para la imagen */
+.about-image {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  padding-left: 5px;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 15px 30px rgba(72, 207, 255, 0.4),
+              0 20px 40px rgba(72, 207, 255, 0.25),
+              0 30px 60px rgba(72, 207, 255, 0.15);
+}
+
+/* Divider */
+.divider {
+  margin: 100px auto 0;
+  width: 60%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,80 @@
+#tech {
+  max-width: 1100px; /* Compactamos un poco la sección */
+  margin: 0 auto;
+  padding: 40px 20px; /* Ajustamos ligeramente el padding */
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #d1d5db;
+  text-align: left;
+  padding-left: 20px; /* Mantenemos el padding alineado con About */
+}
+
+.embla {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.embla__slide {
+  flex: 0 0 auto;
+  width: 8rem; /* Restauramos el tamaño adecuado del contenedor */
+  margin: 0 1rem; /* Aumentamos el espacio entre los logos */
+  position: relative;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem; /* Restauramos el tamaño original del cuadro */
+  width: 8rem;
+  background: linear-gradient(145deg, #ffffff, #d9d9d9);
+  border-radius: 7px;
+}
+
+.logo {
+  width: 70px; /* Restauramos el tamaño de los logos */
+  height: 70px;
+}
+
+/* Para mejorar la responsividad */
+@media (max-width: 768px) {
+  .embla__slide {
+    width: 6rem;
+  }
+
+  .logo-wrapper {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .embla__slide {
+    width: 5rem;
+  }
+
+  .logo-wrapper {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+}

@@ -1,12 +1,26 @@
+/* Asegurar que html y body ocupen el 100% de la altura y ancho */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    background: rgb(17,18,75);
+    background: linear-gradient(180deg, rgba(17,18,75,1) 0%, rgba(1,1,25,0.9669117647058824) 100%);
+    background-size: cover;
+    background-position: center;
+}
 
-/* 
+/* Aseguramos que el #app y sus componentes ocupen toda la altura */
+/* #app {
+    min-height: 100vh; Asegurar que ocupe toda la altura de la pantalla 
+    display: flex;
+    flex-direction: column;
+} */
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+/* Responsividad del fondo */
+@media (max-width: 768px) {
+    html, body {
+        background-size: auto;
+    }
+}

@@ -20,7 +20,8 @@ body {
   width: 100%;
   height: 80px;
   z-index: 100;
-  background-color: transparent;
+  background-color: rgba(9, 9, 35, 0.5); /* Fondo oscuro con 80% de opacidad */
+  backdrop-filter: blur(3px); /* Añade un efecto de desenfoque detrás */
 }
 
 .navbar-brand {
@@ -29,13 +30,16 @@ body {
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
-  /* Asegura que el logo Franco.dev se mantenga a la izquierda */
   position: relative;
-  left: 0;
 }
 
 .navbar-brand:hover {
-  color: white;
+  /* Color del fondo del botón SEND aplicado al hover */
+  color: #AF40FF; /* Primer color del degradado */
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .navbar-links {
@@ -49,14 +53,85 @@ body {
 }
 
 .navbar-links a {
-  text-decoration: none;
+  position: relative;
   color: white;
   font-size: 1rem;
+  text-decoration: none;
+  padding: 10px;
   transition: color 0.3s ease;
 }
 
 .navbar-links a:hover {
-  color: rgb(29, 78, 216); 
+  color: #AF40FF; /* Aplicamos el mismo color que en Franco.dev */
+}
+
+/* Borde animado desde los lados opuestos */
+.navbar-links a::before,
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB); /* Degradado */
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-links a::before {
+  height: 1px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.navbar-links a::after {
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.navbar-links a:hover::before {
+  transform: scaleX(1);
+  transition-delay: 0.1s;
+}
+
+.navbar-links a:hover::after {
+  transform: scaleX(1);
+  transition-delay: 0.2s;
+}
+
+.navbar-links a .border-left,
+.navbar-links a .border-right {
+  content: '';
+  position: absolute;
+  background: currentColor;
+  height: 100%;
+  width: 1px;
+  top: 0;
+  transform: scaleY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-links a .border-left {
+  left: 0;
+  transform-origin: top;
+}
+
+.navbar-links a .border-right {
+  right: 0;
+  transform-origin: bottom;
+}
+
+.navbar-links a:hover .border-left {
+  transform: scaleY(1);
+  transition-delay: 0.3s;
+}
+
+.navbar-links a:hover .border-right {
+  transform: scaleY(1);
+  transition-delay: 0.4s;
 }
 
 /* Ícono de menú hamburguesa (oculto en pantallas grandes) */
@@ -66,26 +141,19 @@ body {
   color: white;
   cursor: pointer;
   position: absolute;
-  right: 40px; /* Asegura que esté alineado a la derecha */
+  right: 40px;
   top: 50%;
-  transform: translateY(-50%); /* Centra verticalmente la hamburguesa */
+  transform: translateY(-50%);
 }
 
 /* Estilos responsive */
 @media (max-width: 768px) {
   .navbar {
-    justify-content: flex-start; /* Mantiene el logotipo a la izquierda */
+    justify-content: flex-start;
     padding: 10px 5%;
-    position: relative;
+    background-color: rgba(10, 15, 36, 0.9);
   }
 
-  /* Mantén la marca a la izquierda en móviles */
-  .navbar-brand {
-    position: relative;
-    margin-right: auto; /* Empuja la marca a la izquierda */
-  }
-
-  /* Ocultar enlaces por defecto en pantallas pequeñas */
   .navbar-links {
     display: none;
     flex-direction: column;
@@ -98,16 +166,10 @@ body {
     text-align: center;
   }
 
-  /* Mostrar enlaces cuando se activa el menú */
   .navbar-links.active {
     display: flex;
   }
 
-  .navbar-brand {
-    margin-bottom: 10px;
-  }
-
-  /* Mostrar el ícono de hamburguesa en pantallas pequeñas */
   .hamburger {
     display: block;
   }

@@ -1,30 +1,42 @@
 import React from 'react';
 import '../../styles/projects.css';
+import geekfood from '../../img/geekfood.png';
+import starwars from '../../img/starwars.png';
+import landingpage from '../../img/landingpage.png';
+import starwarsapi from '../../img/starwarsapi.png';
 
 const projectsData = [
   {
-    title: 'Real Time Chat Application',
-    description: 'The real-time chat application built with Node.js employs WebSockets for instant messaging, ensuring low-latency communication. It features robust user authentication and authorization mechanisms for secure access.',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'WebSockets'],
-    githubLink: 'https://github.com/user/chat-app',
+    title: 'Geek Food',
+    description: 'The online ordering platform enables users to efficiently browse and filter products, enhancing the discovery experience. It offers secure user authentication for seamless registration and login. The platform also supports payment management and optimized image handling for smoother transactions and faster load times.',
+    technologies: ['Javascript', 'React', 'Bootstrap', 'NodeJs', 'Python', 'Flask', 'PostgreSQL', 'JWT'],
+    githubLink: 'https://github.com/francoparavan/geekfood',
     liveLink: 'https://chatapp.com',
-    imageSrc: 'path/to/chat-app-image.jpg'
+    imageSrc: geekfood
   },
   {
-    title: 'Notes Application',
-    description: 'This is a full-stack notes application built using the MERN stack. The application allows users to login to their account and create, read, update, and delete notes.',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
-    githubLink: 'https://github.com/user/notes-app',
+    title: 'Star Wars Blog',
+    description: 'The web application provides an interactive experience by integrating dynamic data from the Star Wars API, allowing users to explore characters, vehicles, and planets. It features a "favorites" system for seamless user interaction and navigation between different views. The responsive design ensures an optimal user interface across devices, with smooth transitions between pages for detailed content exploration.',
+    technologies: ['Javascript', 'React', 'Bootstrap'],
+    githubLink: 'https://github.com/francoparavan/star-wars-blog',
     liveLink: 'https://notesapp.com',
-    imageSrc: 'path/to/notes-app-image.jpg'
+    imageSrc: starwars
   },
   {
-    title: 'Authentication App',
-    description: 'This is an authentication application where users can register themselves, log in, view and update their profiles, and reset their passwords using an OTP sent to their email.',
-    technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'JWT'],
-    githubLink: 'https://github.com/user/auth-app',
+    title: 'Star Wars Themed REST API Development',
+    description: 'The Flask API enables efficient management of Star Wars-themed characters, planets, and user favorites for a personalized blog experience. A robust data model was designed with SQLAlchemy and Alembic migrations to handle database interactions. Endpoints were implemented to manage favorites, as well as to list and detail characters and planets, ensuring reliable and smooth functionality through thorough testing.',
+    technologies: ['Python', 'Flask', 'SQLite'],
+    githubLink: 'https://github.com/francoparavan/build-starwars-rest-api',
     liveLink: 'https://authapp.com',
-    imageSrc: 'path/to/auth-app-image.jpg'
+    imageSrc: starwarsapi
+  },
+  {
+    title: 'AdventureSphere: Tourism Landing Page',
+    description: 'The landing page for the travel agency features a modular interface, divided into reusable components for better scalability and maintainability. It incorporates a responsive design, ensuring optimal user experience across devices. The focus on component reusability and clear structure enhances both the performance and future development of the project.',
+    technologies: ['Javascript', 'React', 'Bootstrap'],
+    githubLink: 'https://github.com/francoparavan/landing-page',
+    liveLink: 'https://authapp.com',
+    imageSrc: landingpage
   }
 ];
 
@@ -46,7 +58,7 @@ const Projects = () => {
                     <i className="fa-brands fa-github"></i>
                   </a>
                   <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                  <i className="bi bi-box-arrow-up-right"></i>
+                    <i className="bi bi-box-arrow-up-right"></i>
                   </a>
                 </div>
               </div>
@@ -60,8 +72,13 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      {/* Texto centrado debajo de las tarjetas */}
+      <div className="more-projects">
+        <p>AND MORE TO COME...</p>
+      </div>
     </section>
   );
 };
 
 export default Projects;
+

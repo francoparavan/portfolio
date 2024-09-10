@@ -4,18 +4,18 @@ import profileImg from '../../img/Profilepic.png';
 
 const About = () => {
   return (
-    <div className="about-section">
+    <div id="about" className="about-section"> 
       <div className="about-content">
         <div className="about-text">
           <h2>About</h2>
           <p>
-            Back in 2020, I decided to try my hand at web development and jump into programming, learning <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong> – a move which snowballed my intrigue of tech.
+            I'm a <strong>Full-Stack Developer</strong> with a flexible approach, combining creativity and logic to create intuitive interfaces and ensure solid, efficient functionality.
           </p>
           <p>
-            Fast forward to now, I've been working as a <strong>Frontend Developer</strong> for nearly 3 years, and have been fortunate enough to work on some exciting projects, and with some amazing people.
+            With knowledge of technologies such as <strong>JavaScript</strong>, <strong>Python</strong>, <strong>React</strong>, <strong>Flask</strong>, among others, I enjoy the challenge of designing intuitive interfaces as much as the logic that supports them.
           </p>
           <p>
-            My passion for web development has only grown, and I'm always looking to learn new things and improve my skills. I'm currently working with <strong>React</strong>, <strong>Next.js</strong>, and <strong>Tailwind CSS</strong> to build modern, responsive and accessible web applications.
+            I’m continuously learning, always looking to improve and add value to every project. I’m motivated to collaborate in teams, adapting to the needs of each development to contribute to solutions that are both pleasant and useful for users.
           </p>
         </div>
         <div className="about-image">

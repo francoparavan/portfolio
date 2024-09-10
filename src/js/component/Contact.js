@@ -39,22 +39,22 @@ const Contact = () => {
         <div className="contact-left">
           <div className="profile">
             <img src={mainperson} alt="Profile" className="profile-image" />
-            <h3>Para Frederik</h3>
-            <p className="centered-text">Frontend Developer</p>
+            <h3>Franco Paravan</h3>
+            <p className="centered-text">Full-Stack Developer</p>
             <p className="short-description">
-              I create responsive and modern web interfaces with attention to detail. I create responsive and modern web interfaces with attention to detail. I create responsive and modern web interfaces with attention to detail.
+            Feel free to reach out anytime. I'm always up for new connections!
             </p>
           </div>
           <div className="social-media">
             <p className="centered-text">FIND ME ON</p>
             <div className="social-icons">
-              <a href="#" target="_blank" rel="noopener noreferrer" className="transUp">
+              <a href="https://www.linkedin.com/in/francoparavan/" target="_blank" rel="noopener noreferrer" className="transUp">
                 <FontAwesomeIcon icon={faLinkedin} className="social-icon" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="transUp">
+              <a href="https://github.com/francoparavan" target="_blank" rel="noopener noreferrer" className="transUp">
                 <FontAwesomeIcon icon={faGithub} className="social-icon" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="transUp">
+              <a href="mailto:francoparavan@gmail.com" target="_blank" rel="noopener noreferrer" className="transUp">
                 <FontAwesomeIcon icon={faEnvelope} className="social-icon" />
               </a>
             </div>

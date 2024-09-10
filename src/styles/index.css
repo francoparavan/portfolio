@@ -5,8 +5,9 @@ body {
     height: 100%;
     width: 100%;
     font-family: sans-serif;
-    background: rgb(17,18,75);
-    background: linear-gradient(180deg, rgba(17,18,75,1) 0%, rgba(1,1,25,0.9669117647058824) 100%);
+    /* background: rgb(17,18,75); */
+    background: rgb(9, 9, 35);
+    /* background: linear-gradient(180deg, rgba(17,18,75,1) 0%, rgba(1,1,25,0.9669117647058824) 100%); */
     background-size: cover;
     background-position: center;
 }

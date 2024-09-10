@@ -9,7 +9,7 @@ const Jumbo = () => {
         <h1>Franco Paravan</h1>
         <h2>Full-Stack Developer</h2>
         <p>
-          I create flawless, captivating, and inclusive digital interactions with a focus on pixel precision.
+        I create intuitive web solutions, enhancing user experience and exploring new technologies to continuously innovate in the digital world.
         </p>
       </div>
       <div className="divider"></div> {/* Añadimos el divider */}

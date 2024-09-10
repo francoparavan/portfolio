@@ -1,0 +1,14 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; /* Ajuste del padding para agregar más espacio */
+    margin-top: 50px; /* Añadimos más espacio con el componente superior */
+}
+
+/* Texto del footer */
+footer p {
+    color: #d1d5db; /* Color del texto */
+    font-size: 1rem;
+    margin: 0;
+}

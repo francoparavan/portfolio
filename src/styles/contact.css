@@ -21,7 +21,8 @@ h2 {
 
 .contact-left, .contact-right {
   background-color: rgb(35, 35, 63);
-  box-shadow: 0 10px 30px rgba(44, 114, 160, 0.4);
+  /* Cambiamos el box-shadow a uno similar al del botón SEND */
+  box-shadow: 0 10px 30px rgba(175, 64, 255, 0.2); 
   border-radius: 12px;
   padding: 30px 20px;
   display: flex;
@@ -57,12 +58,14 @@ h3 {
   text-align: center;
 }
 
+/* Modificación de la frase para centrar y ajustar espaciado */
 .short-description {
   color: #bbbbbb;
-  margin-top: 15px;
+  margin-top: 27px; /* Aumentamos el margen superior para bajarlo más */
   font-size: 1rem;
-  text-align: justify;
+  text-align: center; /* Centramos la frase */
   padding: 0 20px;
+  line-height: 1.5rem; /* Ajustamos el espaciado de las líneas */
 }
 
 p {

@@ -5,6 +5,8 @@ import About from "./About";
 import Technologies from "./Technologies";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
         <Technologies />
         <Projects />
         <Contact />
+        <Footer />
+        <ScrollToTop />
       </>
   );
 };

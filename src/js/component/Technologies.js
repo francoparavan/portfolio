@@ -3,16 +3,18 @@ import useEmblaCarousel from 'embla-carousel-react';
 import '../../styles/technologies.css';
 
 const technologies = [
-  { name: 'Next.js', url: 'https://nextjs.org/', imageSrc: 'ruta_a_tu_logo_nextjs.png' },
-  { name: 'TypeScript', url: 'https://www.typescriptlang.org/', imageSrc: 'ruta_a_tu_logo_typescript.png' },
-  { name: 'React', url: 'https://reactjs.org/', imageSrc: 'ruta_a_tu_logo_react.png' },
-  { name: 'AWS', url: 'https://aws.amazon.com/', imageSrc: 'ruta_a_tu_logo_aws.png' },
-  { name: 'Express', url: 'https://expressjs.com/', imageSrc: 'ruta_a_tu_logo_express.png' },
-  { name: 'GraphQL', url: 'https://graphql.org/', imageSrc: 'ruta_a_tu_logo_graphql.png' },
-  { name: 'Git', url: 'https://git-scm.com/', imageSrc: 'ruta_a_tu_logo_git.png' },
-  { name: 'GitHub', url: 'https://github.com/', imageSrc: 'ruta_a_tu_logo_github.png' },
-  { name: 'Vercel', url: 'https://vercel.com/', imageSrc: 'ruta_a_tu_logo_vercel.png' },
-  { name: 'Tailwind CSS', url: 'https://tailwindcss.com/', imageSrc: 'ruta_a_tu_logo_tailwind.png' }
+  { name: 'Javascript', imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+  { name: 'Python', imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+  { name: 'React', imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+  { name: 'Flask', imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" },
+  { name: 'HTML', imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
+  { name: 'CSS', imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
+  { name: 'Bootstrap', imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" },
+  { name: 'JEST', imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg" },
+  { name: 'NodeJs', imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+  { name: 'PostgreSQL', imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+  { name: 'MySQL', imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
+  { name: 'Git', imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" }
 ];
 
 const Technologies = () => {
@@ -28,8 +30,8 @@ const Technologies = () => {
     if (!emblaApi) return;
 
     const autoplay = setInterval(() => {
-      emblaApi.scrollNext(); // Movimiento automático cada 3 segundos
-    }, 1000);
+      emblaApi.scrollNext(); 
+    }, 900);
 
     return () => clearInterval(autoplay); // Limpiar el intervalo al desmontar
   }, [emblaApi]);

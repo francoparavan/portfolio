@@ -1,7 +1,7 @@
 #contact {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 100px 20px; /* Ajustamos la distancia vertical */
   box-sizing: border-box;
 }
 
@@ -21,8 +21,7 @@ h2 {
 
 .contact-left, .contact-right {
   background-color: rgb(35, 35, 63);
-  /* Cambiamos el box-shadow a uno similar al del botón SEND */
-  box-shadow: 0 10px 30px rgba(175, 64, 255, 0.2); 
+  box-shadow: 0 10px 30px rgba(175, 64, 255, 0.2);
   border-radius: 12px;
   padding: 30px 20px;
   display: flex;
@@ -58,12 +57,11 @@ h3 {
   text-align: center;
 }
 
-/* Modificación de la frase para centrar y ajustar espaciado */
 .short-description {
   color: #bbbbbb;
   margin-top: 27px; /* Aumentamos el margen superior para bajarlo más */
   font-size: 1rem;
-  text-align: center; /* Centramos la frase */
+  text-align: center;
   padding: 0 20px;
   line-height: 1.5rem; /* Ajustamos el espaciado de las líneas */
 }
@@ -107,7 +105,7 @@ p {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Aumentamos ligeramente el espacio entre los grupos de formulario */
+  gap: 10px;
 }
 
 .form-group {
@@ -119,7 +117,7 @@ p {
 .form-group label {
   font-size: 0.875rem;
   color: #ffffff;
-  font-weight: bold; /* Aplicamos el estilo bold a las etiquetas */
+  font-weight: bold;
 }
 
 .form-group input, .form-group textarea {
@@ -130,7 +128,7 @@ p {
   color: #ffffff;
   background-color: rgb(35, 35, 63);
   font-family: 'Arial', sans-serif;
-  margin-bottom: 5px; /* Reducimos el margen inferior */
+  margin-bottom: 5px;
 }
 
 .form-group input:focus, .form-group textarea:focus {
@@ -140,20 +138,18 @@ p {
 
 .form-group textarea {
   resize: none;
-  margin-bottom: 5px; /* Reducimos el margen inferior */
+  margin-bottom: 5px;
 }
 
-/* Mensajes de error */
 .error-message {
   color: red;
   font-size: 0.75rem;
-  margin-top: -5px; /* Acercamos el mensaje de error al campo */
+  margin-top: -5px;
 }
 
-/* Botón SEND ajustado para armonía */
 .btn-submit {
   align-items: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
   border: 0;
   border-radius: 8px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
@@ -166,13 +162,13 @@ p {
   line-height: 1em;
   max-width: 100%;
   min-width: 140px;
-  padding: 10px;  /* Ajuste del padding para dar más altura al botón */
-  height: 45px; /* Ajustamos un poco más la altura del botón */
+  padding: 10px;
+  height: 45px;
   text-decoration: none;
   user-select: none;
   white-space: nowrap;
   cursor: pointer;
-  margin-top: 20px; /* Añadimos un margen superior para separar del textarea */
+  margin-top: 20px;
   transition: 0.2s ease-in-out;
 }
 

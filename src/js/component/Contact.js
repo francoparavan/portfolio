@@ -42,7 +42,7 @@ const Contact = () => {
             <h3>Franco Paravan</h3>
             <p className="centered-text">Full-Stack Developer</p>
             <p className="short-description">
-            Feel free to reach out anytime. I'm always up for new connections!
+              Feel free to reach out anytime. I'm always up for new connections!
             </p>
           </div>
           <div className="social-media">

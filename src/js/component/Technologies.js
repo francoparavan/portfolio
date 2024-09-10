@@ -20,20 +20,19 @@ const technologies = [
 const Technologies = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
-    align: 'start', // Alinear los elementos al inicio
+    align: 'start',
     skipSnaps: false,
     dragFree: false,
   });
 
-  // Movimiento automático
   useEffect(() => {
     if (!emblaApi) return;
 
     const autoplay = setInterval(() => {
       emblaApi.scrollNext(); 
-    }, 900);
+    }, 1000);
 
-    return () => clearInterval(autoplay); // Limpiar el intervalo al desmontar
+    return () => clearInterval(autoplay);
   }, [emblaApi]);
 
   return (
@@ -43,11 +42,9 @@ const Technologies = () => {
         <div className="embla__container">
           {technologies.map((tech) => (
             <div className="embla__slide" key={tech.name}>
-              <a href={tech.url} target="_blank" rel="noopener noreferrer" aria-label={tech.name}>
-                <div className="logo-wrapper">
-                  <img src={tech.imageSrc} alt={tech.name} className="logo" />
-                </div>
-              </a>
+              <div className="logo-wrapper">
+                <img src={tech.imageSrc} alt={tech.name} className="logo" />
+              </div>
             </div>
           ))}
         </div>
@@ -57,4 +54,3 @@ const Technologies = () => {
 };
 
 export default Technologies;
-

@@ -6,12 +6,12 @@
   height: 100vh; /* Mantener altura completa */
   padding: 100px 20px 0;
   flex-direction: column;
-  background: none; /* Asegurar que no haya fondo */
+
 }
 
 /* Contenido del Jumbo */
 .jumbo-content {
-  text-align: center; /* Esto ya está presente, pero lo reiteramos */
+  text-align: center; /* Alinea el texto en el centro */
   color: white;
   position: relative;
   padding-bottom: 40px;
@@ -43,9 +43,9 @@
 
 .jumbo-content h2 {
   font-size: 2rem;
-  margin: 25px 0 20px 0; /* Aumentamos el margen inferior para agregar más espacio */
+  margin: 25px 0 20px 0;
   color: transparent;
-  background: linear-gradient(90deg, #FF8A00, #E52E71, #9B00E8, #4A007E); /* Último color es una versión más oscura */
+  background: linear-gradient(90deg, #FF8A00, #E52E71, #9B00E8, #4A007E); /* Último color es más oscuro */
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: bold;
@@ -57,19 +57,12 @@
   margin: 28px auto;
   color: #a9afba;
   text-align: center;
-  margin-top: 20px; /* Ajustamos margen superior si se desea mayor separación */
+  margin-top: 20px;
 }
 
-/* Divider */
-.divider {
-  width: 60%;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin: 50px auto 0;
-}
-
+/* Responsividad */
 @media (max-width: 768px) {
   .jumbo-container {
-      padding-top: 80px; /* Ajusta el valor según la altura del navbar en pantallas más pequeñas */
+    padding-top: 80px; /* Ajusta el valor según la altura del navbar en pantallas más pequeñas */
   }
 }

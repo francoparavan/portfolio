@@ -1,27 +1,26 @@
-/* Sección de About */
 .about-section {
-  padding: 60px 20px; /* Ajusta el espacio entre los componentes */
-  background: none; /* Asegura que no tenga fondo propio */
+  padding: 60px 20px;
+  margin: 60px auto;
+  max-width: 1100px;
+  position: relative;
+  scroll-margin-top: 100px; /* Agregamos este margen para que el título no quede tapado por el navbar */
 }
 
 /* Contenedor principal que alinea el texto y la imagen */
 .about-content {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  max-width: 1200px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
   margin: 0 auto;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
 }
 
 /* Estilos para el texto */
 .about-text {
   flex: 1;
-  max-width: 650px;
+  max-width: 680px;
   color: #ffffff;
   font-size: 1.1rem;
-  margin-right: 5px;
 }
 
 .about-text h2 {
@@ -33,7 +32,6 @@
 .about-text p {
   margin-bottom: 20px;
   line-height: 1.6;
-  color: #a9afba;
   text-align: justify;
 }
 
@@ -43,24 +41,30 @@
 
 /* Estilos para la imagen */
 .about-image {
-  flex: 1;
+  flex: 0 1 300px;
   max-width: 300px;
   text-align: center;
-  padding-left: 5px;
+  margin-top: 20px;
 }
 
 .about-image img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
   border-radius: 50%;
   box-shadow: 0 15px 30px rgba(72, 207, 255, 0.4),
               0 20px 40px rgba(72, 207, 255, 0.25),
               0 30px 60px rgba(72, 207, 255, 0.15);
 }
 
-/* Divider */
-.divider {
-  margin: 100px auto 0;
-  width: 60%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.2);
+/* Responsivo */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    margin-top: 20px;
+  }
 }

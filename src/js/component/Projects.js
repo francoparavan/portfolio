@@ -1,4 +1,5 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 import '../../styles/projects.css';
 import geekfood from '../../img/geekfood.png';
 import starwars from '../../img/starwars.png';
@@ -41,10 +42,28 @@ const projectsData = [
 ];
 
 const Projects = () => {
+  // Hook para el h2 que controlará todas las animaciones
+  const { ref: titleRef, inView: titleInView } = useInView({
+    triggerOnce: true, // Solo se ejecuta la animación la primera vez
+    threshold: 0.1,    // Se activa cuando el 10% del h2 entra en el viewport
+  });
+
   return (
     <section id="projects">
-      <h2>Projects</h2>
-      <div className="projects-container">
+      {/* Título con animación hacia abajo */}
+      <h2
+        ref={titleRef}
+        className={`animate__animated ${titleInView ? 'animate__fadeInDown' : ''}`}
+        style={{ '--animate-duration': '2s' }}
+      >
+        Projects
+      </h2>
+
+      {/* Contenido con animación hacia arriba, activado cuando el h2 entra en el viewport */}
+      <div
+        className={`projects-container animate__animated ${titleInView ? 'animate__fadeInUp' : ''}`}
+        style={{ '--animate-duration': '2s' }}
+      >
         {projectsData.map((project, index) => (
           <div className="project-card" key={index}>
             <div className="project-image">
@@ -72,9 +91,10 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      
       {/* Texto centrado debajo de las tarjetas */}
       <div className="more-projects">
-        <p>AND MORE TO COME...</p>
+        <p>AND MORE...</p>
       </div>
     </section>
   );

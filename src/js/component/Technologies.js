@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import useEmblaCarousel from 'embla-carousel-react';
 import '../../styles/technologies.css';
 
@@ -25,6 +26,12 @@ const Technologies = () => {
     dragFree: false,
   });
 
+  // Hook para detectar cuando el h2 entra en el viewport
+  const { ref: titleRef, inView: titleInView } = useInView({
+    triggerOnce: true, // Solo se ejecuta la animación una vez
+    threshold: 0.2,    // Se activa cuando el 10% del título entra en el viewport
+  });
+
   useEffect(() => {
     if (!emblaApi) return;
 
@@ -37,8 +44,21 @@ const Technologies = () => {
 
   return (
     <div id="tech">
-      <h2>Technologies</h2>
-      <div className="embla" ref={emblaRef}>
+      {/* Título con animación fadeInDown */}
+      <h2
+        ref={titleRef}
+        className={`animate__animated ${titleInView ? 'animate__fadeInDown' : ''}`}
+        style={{ '--animate-duration': '2s' }}
+      >
+        Technologies
+      </h2>
+
+      {/* Carrusel con animación fadeInUp, activado cuando el título es visible */}
+      <div
+        className={`embla animate__animated ${titleInView ? 'animate__fadeInUp' : ''}`}
+        ref={emblaRef}
+        style={{ '--animate-duration': '2s' }}
+      >
         <div className="embla__container">
           {technologies.map((tech) => (
             <div className="embla__slide" key={tech.name}>

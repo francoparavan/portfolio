@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import '../../styles/contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -32,14 +33,32 @@ const Contact = () => {
     }
   };
 
+  // Hook para detectar cuando el h2 entra en el viewport
+  const { ref: titleRef, inView: titleInView } = useInView({
+    triggerOnce: true, // Solo se ejecuta una vez
+    threshold: 0.2,    // Se activa cuando el 10% del título entra en el viewport
+  });
+
   return (
     <section id="contact">
-      <h2>Contact</h2>
+      {/* Título con animación fadeInDown */}
+      <h2
+        ref={titleRef}
+        className={`animate__animated ${titleInView ? 'animate__fadeInDown' : ''}`}
+        style={{ '--animate-duration': '2s' }}
+      >
+        Contact
+      </h2>
+
       <div className="contact-container">
-        <div className="contact-left">
+        {/* Caja izquierda con animación fadeInLeft */}
+        <div
+          className={`contact-left animate__animated ${titleInView ? 'animate__fadeInLeft' : ''}`}
+          style={{ '--animate-duration': '2s' }}
+        >
           <div className="profile">
             <img src={mainperson} alt="Profile" className="profile-image" />
-            <h3>Franco Paravan</h3>
+            <h3>Franco Paraván</h3>
             <p className="centered-text">Full-Stack Developer</p>
             <p className="short-description">
               Feel free to reach out anytime. I'm always up for new connections!
@@ -60,7 +79,12 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="contact-right">
+
+        {/* Caja derecha con animación fadeInRight */}
+        <div
+          className={`contact-right animate__animated ${titleInView ? 'animate__fadeInRight' : ''}`}
+          style={{ '--animate-duration': '2s' }}
+        >
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Name</label>

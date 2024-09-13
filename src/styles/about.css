@@ -3,10 +3,9 @@
   margin: 60px auto;
   max-width: 1100px;
   position: relative;
-  scroll-margin-top: 100px; /* Agregamos este margen para que el título no quede tapado por el navbar */
+  scroll-margin-top: 100px; 
 }
 
-/* Contenedor principal que alinea el texto y la imagen */
 .about-content {
   display: flex;
   justify-content: space-between;
@@ -15,7 +14,6 @@
   margin: 0 auto;
 }
 
-/* Estilos para el texto */
 .about-text {
   flex: 1;
   max-width: 680px;
@@ -39,7 +37,6 @@
   color: #ffffff;
 }
 
-/* Estilos para la imagen */
 .about-image {
   flex: 0 1 300px;
   max-width: 300px;
@@ -57,7 +54,6 @@
               0 30px 60px rgba(72, 207, 255, 0.15);
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
   .about-content {
     flex-direction: column;

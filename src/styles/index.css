@@ -1,4 +1,3 @@
-/* Asegurar que html y body ocupen el 100% de la altura y ancho */
 body {
     margin: 0;
     padding: 0;
@@ -11,14 +10,6 @@ body {
     background-position: center;
 }
 
-/* Aseguramos que el #app y sus componentes ocupen toda la altura */
-/* #app {
-    min-height: 100vh; Asegurar que ocupe toda la altura de la pantalla 
-    display: flex;
-    flex-direction: column;
-} */
-
-/* Responsividad del fondo */
 @media (max-width: 768px) {
     html, body {
         background-size: auto;

@@ -33,15 +33,13 @@ const Contact = () => {
     }
   };
 
-  // Hook para detectar cuando el h2 entra en el viewport
   const { ref: titleRef, inView: titleInView } = useInView({
-    triggerOnce: true, // Solo se ejecuta una vez
-    threshold: 0.2,    // Se activa cuando el 10% del título entra en el viewport
+    triggerOnce: true, 
+    threshold: 0.2,    
   });
 
   return (
     <section id="contact">
-      {/* Título con animación fadeInDown */}
       <h2
         ref={titleRef}
         className={`animate__animated ${titleInView ? 'animate__fadeInDown' : ''}`}
@@ -51,7 +49,6 @@ const Contact = () => {
       </h2>
 
       <div className="contact-container">
-        {/* Caja izquierda con animación fadeInLeft */}
         <div
           className={`contact-left animate__animated ${titleInView ? 'animate__fadeInLeft' : ''}`}
           style={{ '--animate-duration': '2s' }}
@@ -79,8 +76,6 @@ const Contact = () => {
             </div>
           </div>
         </div>
-
-        {/* Caja derecha con animación fadeInRight */}
         <div
           className={`contact-right animate__animated ${titleInView ? 'animate__fadeInRight' : ''}`}
           style={{ '--animate-duration': '2s' }}

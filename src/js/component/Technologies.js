@@ -25,11 +25,9 @@ const Technologies = () => {
     skipSnaps: false,
     dragFree: false,
   });
-
-  // Hook para detectar cuando el h2 entra en el viewport
   const { ref: titleRef, inView: titleInView } = useInView({
-    triggerOnce: true, // Solo se ejecuta la animación una vez
-    threshold: 0.2,    // Se activa cuando el 10% del título entra en el viewport
+    triggerOnce: true, 
+    threshold: 0.2,    
   });
 
   useEffect(() => {
@@ -44,7 +42,6 @@ const Technologies = () => {
 
   return (
     <div id="tech">
-      {/* Título con animación fadeInDown */}
       <h2
         ref={titleRef}
         className={`animate__animated ${titleInView ? 'animate__fadeInDown' : ''}`}
@@ -52,8 +49,6 @@ const Technologies = () => {
       >
         Technologies
       </h2>
-
-      {/* Carrusel con animación fadeInUp, activado cuando el título es visible */}
       <div
         className={`embla animate__animated ${titleInView ? 'animate__fadeInUp' : ''}`}
         ref={emblaRef}

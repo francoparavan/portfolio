@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import '../../styles/navbar.css';
 
 const Navbar = () => {
-  // Estado para manejar si el menú está abierto o cerrado
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Función para alternar la visibilidad del menú
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -15,7 +13,6 @@ const Navbar = () => {
       <a href="#about" className="navbar-brand">
         Franco.dev
       </a>
-      {/* Lista de enlaces, visible solo si el menú está abierto en pantallas pequeñas */}
       <ul className={`navbar-links ${menuOpen ? 'active' : ''}`}>
         <li><a href="#about">About</a></li>
         <li><a href="#tech">Tech</a></li>
@@ -25,7 +22,7 @@ const Navbar = () => {
       </ul>
       {/* Ícono de menú hamburguesa */}
       <div className="hamburger" onClick={toggleMenu}>
-        &#9776; {/* Icono de hamburguesa */}
+        &#9776;
       </div>
     </nav>
   );

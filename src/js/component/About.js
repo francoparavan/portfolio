@@ -4,17 +4,15 @@ import '../../styles/about.css';
 import profileImg from '../../img/Profilepic.png';
 
 const About = () => {
-  // Hook para el título (h2), que activará todas las animaciones cuando sea visible
   const { ref: titleRef, inView: titleInView } = useInView({
-    triggerOnce: true, // Solo se activa una vez
-    threshold: 0.2,    // Se activa cuando el 10% del título es visible
+    triggerOnce: true, 
+    threshold: 0.2,    
   });
 
   return (
     <div id="about" className="about-section"> 
       <div className="about-content">
         <div className="about-text">
-          {/* Título con animación hacia abajo */}
           <h2
             ref={titleRef}
             className={`animate__animated ${titleInView ? 'animate__fadeInDown' : ''}`}
@@ -22,8 +20,6 @@ const About = () => {
           >
             About
           </h2>
-
-          {/* Párrafos con animación hacia la izquierda, activados cuando el título es visible */}
           <p
             className={`animate__animated ${titleInView ? 'animate__fadeInLeft' : ''}`}
             style={{ '--animate-duration': '2s' }}
@@ -43,8 +39,6 @@ const About = () => {
             I’m continuously learning, always looking to improve and add value to every project. I’m motivated to collaborate in teams, adapting to the needs of each development to contribute to solutions that are both pleasant and useful for users.
           </p>
         </div>
-
-        {/* Imagen con animación hacia la derecha, activada cuando el título es visible */}
         <div className="about-image">
           <img
             className={`animate__animated ${titleInView ? 'animate__fadeInRight' : ''}`}

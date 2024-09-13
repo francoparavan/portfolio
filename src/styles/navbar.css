@@ -20,8 +20,8 @@ body {
   width: 100%;
   height: 80px;
   z-index: 100;
-  background-color: rgba(9, 9, 35, 0.5); /* Fondo oscuro con 80% de opacidad */
-  backdrop-filter: blur(3px); /* Añade un efecto de desenfoque detrás */
+  background-color: rgba(9, 9, 35, 0.5); 
+  backdrop-filter: blur(3px); 
 }
 
 .navbar-brand {
@@ -34,8 +34,7 @@ body {
 }
 
 .navbar-brand:hover {
-  /* Color del fondo del botón SEND aplicado al hover */
-  color: #AF40FF; /* Primer color del degradado */
+  color: #AF40FF;
   background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
   -webkit-background-clip: text;
   background-clip: text;
@@ -62,15 +61,14 @@ body {
 }
 
 .navbar-links a:hover {
-  color: #AF40FF; /* Aplicamos el mismo color que en Franco.dev */
+  color: #AF40FF; 
 }
 
-/* Borde animado desde los lados opuestos */
 .navbar-links a::before,
 .navbar-links a::after {
   content: '';
   position: absolute;
-  background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB); /* Degradado */
+  background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB); 
   transition: transform 0.3s ease-in-out;
 }
 
@@ -134,7 +132,6 @@ body {
   transition-delay: 0.4s;
 }
 
-/* Ícono de menú hamburguesa (oculto en pantallas grandes) */
 .hamburger {
   display: none;
   font-size: 30px;
@@ -146,7 +143,6 @@ body {
   transform: translateY(-50%);
 }
 
-/* Estilos responsive */
 @media (max-width: 768px) {
   .navbar {
     justify-content: flex-start;

@@ -25,7 +25,6 @@ const Education = () => {
 
   return (
     <section id="education">
-      {/* Título con animación */}
       <h2
         ref={titleRef}
         className={`animate__animated ${titleInView ? 'animate__fadeInDown' : ''}`}
@@ -33,8 +32,6 @@ const Education = () => {
       >
         Education and Certifications
       </h2>
-
-      {/* Cards de educación */}
       <div
         className={`education-container animate__animated ${titleInView ? 'animate__fadeInUp' : ''}`}
         style={{ '--animate-duration': '2s' }}
@@ -46,7 +43,7 @@ const Education = () => {
                 <h3>{education.title}</h3>
                 <span className="education-date"><strong>{education.date}</strong></span>
               </div>
-              <p className="education-institution"><strong>{education.institution}</strong></p> {/* Nuevo campo de institución */}
+              <p className="education-institution"><strong>{education.institution}</strong></p> 
               <p>{education.description}</p>
             </div>
           </div>

@@ -6,11 +6,11 @@
   }
   
   .scroll-button {
-    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB); /* Fondo gradiente permanente */
-    color: white; /* Color del ícono */
-    width: 49px; /* Tamaño del botón */
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB); 
+    color: white; 
+    width: 49px; 
     height: 49px;
-    border-radius: 50%; /* Botón circular */
+    border-radius: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,11 +19,11 @@
   }
   
   .scroll-button:hover {
-    transform: scale(1.1); /* Efecto al pasar el mouse */
+    transform: scale(1.1); 
   }
   
   .scroll-button i {
-    font-size: 27px; /* Tamaño del ícono */
+    font-size: 27px; 
 
   }
   

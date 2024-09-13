@@ -1,97 +1,94 @@
 #education {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 100px 20px;
-  box-sizing: border-box;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    box-sizing: border-box;
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #d1d5db;
-  text-align: left;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #d1d5db;
+    text-align: left;
 }
 
 .education-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px
+    display: flex;
+    flex-direction: column;
+    gap: 15px
 }
 
 .education-card {
-  display: flex;
-  background-color: transparent;
-  border-radius: 12px;
-  overflow: hidden;
-  align-items: flex-start;
-  padding: 15px;
-  height: auto;
-  min-height: 150px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.05); 
+    border-radius: 12px;
+    overflow: hidden;
+    align-items: flex-start;
+    padding: 15px;
+    height: auto;
+    min-height: 150px;
+    box-sizing: border-box;
 }
 
 .education-details {
-  flex: 1;
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    flex: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .education-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .education-header h3 {
-  font-size: 1.5rem;
-  color: #ffffff;
-  margin: 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0;
 }
 
 .education-date {
-  font-size: 1rem;
-  color: #ffffff;
+    font-size: 1rem;
+    color: #ffffff;
 }
 
 .education-details p {
-  margin: 10px 0;
-  color: #a9afba;
-}
-
-.education-institution {
-  margin-top: 5px; /* Añadimos un pequeño margen */
-  color: #d1d5db; /* Color del texto de la institución */
+    margin: 10px 0;
+    color: #a9afba;
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
-  .education-card {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-  }
+    .education-card {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
 
-  .education-details {
-    padding-left: 0;
-  }
+    .education-details {
+        padding-left: 0;
+    }
 
-  .education-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .education-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 @media (max-width: 480px) {
-  .education-card {
-    padding: 15px;
-  }
+    .education-card {
+        padding: 15px;
+    }
 
-  .education-header h3 {
-    font-size: 1.25rem;
-  }
+    .education-header h3 {
+        font-size: 1.25rem;
+    }
 
-  .education-date {
-    font-size: 0.9rem;
-  }
+    .education-date {
+        font-size: 0.9rem;
+    }
 }

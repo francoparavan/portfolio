@@ -1,73 +1,66 @@
-/* Animación personalizada de rotación */
 @keyframes customFlip {
   from {
-    transform: translateX(-50%) rotateY(0deg); /* Mantener el centrado */
+    transform: translateX(-50%) rotateY(0deg); 
   }
   to {
-    transform: translateX(-50%) rotateY(360deg); /* Mantener el centrado mientras gira */
+    transform: translateX(-50%) rotateY(360deg); 
   }
 }
 
 .light-bar.animate__flip-custom {
-  animation: customFlip 1s ease-out; /* Aplica la animación personalizada */
+  animation: customFlip 1s ease-out; 
 }
 
-/* Estilos generales del contenedor */
 .jumbo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Mantener altura completa */
+  height: 100vh; 
   padding: 100px 20px 0;
   flex-direction: column;
 }
 
-/* Contenido del Jumbo */
 .jumbo-content {
-  text-align: center; /* Alinea el texto en el centro */
+  text-align: center; 
   color: white;
   position: relative;
   padding-bottom: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Alinea los elementos horizontalmente en el centro */
+  align-items: center; 
 }
 
-/* Barra luminosa */
 .light-bar {
   width: 400px;
   height: 2px;
   background-color: #48cfff;
   position: absolute;
-  top: -30px; /* Mantén la distancia del h1 */
+  top: -30px; 
   left: 50%;
-  transform: translateX(-50%); /* Centrado horizontal */
+  transform: translateX(-50%); 
   box-shadow: 0 100px 200px rgba(72, 207, 255, 1),
               0 50px 50px rgba(72, 207, 255, 0.8),
               0 20px 40px rgba(72, 207, 255, 0.5);
   border-radius: 2px;
-  z-index: 1; /* Asegura que la barra esté detrás de otros elementos */
+  z-index: 1; 
 }
 
-/* Título principal */
 .jumbo-content h1 {
   font-size: 4.2rem;
   margin: 0;
   color: #d1d5db;
 }
 
-/* Subtítulo */
 .jumbo-content h2 {
   font-size: 2rem;
   margin: 25px 0 20px 0;
   color: transparent;
-  background: linear-gradient(90deg, #FF8A00, #E52E71, #9B00E8, #4A007E); /* Último color es más oscuro */
+  background: linear-gradient(90deg, #FF8A00, #E52E71, #9B00E8, #4A007E); 
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: bold;
 }
 
-/* Descripción */
 .jumbo-content p {
   font-size: 1.1rem;
   max-width: 600px;
@@ -77,9 +70,8 @@
   margin-top: 20px;
 }
 
-/* Responsividad */
 @media (max-width: 768px) {
   .jumbo-container {
-    padding-top: 80px; /* Ajusta el valor según la altura del navbar en pantallas más pequeñas */
+    padding-top: 80px; 
   }
 }

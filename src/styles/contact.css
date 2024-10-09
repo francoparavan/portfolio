@@ -9,17 +9,10 @@ h2 {
   font-size: 2rem;
   margin-bottom: 40px;
   color: #d1d5db;
-  text-align: left;
+  text-align: left; 
 }
 
-.contact-container {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: stretch;
-}
-
-.contact-left, .contact-right {
+.contact-left {
   background-color: rgb(35, 35, 63);
   box-shadow: 0 10px 30px rgba(175, 64, 255, 0.2);
   border-radius: 12px;
@@ -27,18 +20,10 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.contact-left {
-  flex: 0.9;
-}
-
-.contact-right {
-  flex: 1.1;
-}
-
-.profile {
   text-align: center;
+  margin: 0 auto;
+  width: 70%;  /* Mantiene el ancho de antes */
+  max-width: 550px; /* Define un ancho máximo para pantallas grandes */
 }
 
 .profile-image {
@@ -59,25 +44,19 @@ h3 {
 
 .short-description {
   color: #bbbbbb;
-  margin-top: 27px; 
+  margin-top: 27px;
   font-size: 1rem;
   text-align: center;
   padding: 0 20px;
-  line-height: 1.5rem; 
+  line-height: 1.5rem;
 }
 
 p {
   color: #bbbbbb;
   margin: 10px 0;
-  text-align: justify;
 }
 
 .social-media {
-  text-align: center;
-}
-
-.social-media p {
-  color: #ffffff;
   margin-top: 20px;
 }
 
@@ -101,84 +80,10 @@ p {
   transform: translateY(-20px);
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.form-group label {
-  font-size: 0.875rem;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.form-group input, .form-group textarea {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: rgb(35, 35, 63);
-  font-family: 'Arial', sans-serif;
-  margin-bottom: 5px;
-}
-
-.form-group input:focus, .form-group textarea:focus {
-  border-color: rgb(168, 85, 247);
-  outline: none;
-}
-
-.form-group textarea {
-  resize: none;
-  margin-bottom: 5px;
-}
-
-.error-message {
-  color: red;
-  font-size: 0.75rem;
-  margin-top: -5px;
-}
-
-.btn-submit {
-  align-items: center;
-  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
-  border: 0;
-  border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  display: flex;
-  font-family: Phantomsans, sans-serif;
-  font-size: 20px;
-  justify-content: center;
-  line-height: 1em;
-  max-width: 100%;
-  min-width: 140px;
-  padding: 10px;
-  height: 45px;
-  text-decoration: none;
-  user-select: none;
-  white-space: nowrap;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: 0.2s ease-in-out;
-}
-
-.btn-submit:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px rgba(255, 255, 255, 0.1);
-}
-
+/* Responsividad */
 @media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
+  .contact-left {
+    width: 100%; /* Para pantallas pequeñas, el ancho será del 100% */
   }
 
   .social-icons {

@@ -12,7 +12,6 @@ const projectsData = [
     description: 'The online ordering platform enables users to efficiently browse and filter products, enhancing the discovery experience. It offers secure user authentication for seamless registration and login. The platform also supports payment management and optimized image handling for smoother transactions and faster load times.',
     technologies: ['Javascript', 'React', 'Bootstrap', 'NodeJs', 'Python', 'Flask', 'PostgreSQL', 'JWT'],
     githubLink: 'https://github.com/francoparavan/geekfood',
-    liveLink: 'https://chatapp.com',
     imageSrc: geekfood
   },
   {
@@ -20,7 +19,6 @@ const projectsData = [
     description: 'The web application provides an interactive experience by integrating dynamic data from the Star Wars API, allowing users to explore characters, vehicles, and planets. It features a "favorites" system for seamless user interaction and navigation between different views. The responsive design ensures an optimal user interface across devices, with smooth transitions between pages for detailed content exploration.',
     technologies: ['Javascript', 'React', 'Bootstrap'],
     githubLink: 'https://github.com/francoparavan/star-wars-blog',
-    liveLink: 'https://notesapp.com',
     imageSrc: starwars
   },
   {
@@ -28,7 +26,6 @@ const projectsData = [
     description: 'The Flask API enables efficient management of Star Wars-themed characters, planets, and user favorites for a personalized blog experience. A robust data model was designed with SQLAlchemy and Alembic migrations to handle database interactions. Endpoints were implemented to manage favorites, as well as to list and detail characters and planets, ensuring reliable and smooth functionality through thorough testing.',
     technologies: ['Python', 'Flask', 'SQLite'],
     githubLink: 'https://github.com/francoparavan/build-starwars-rest-api',
-    liveLink: 'https://authapp.com',
     imageSrc: starwarsapi
   },
   {
@@ -36,7 +33,6 @@ const projectsData = [
     description: 'The landing page for the travel agency features a modular interface, divided into reusable components for better scalability and maintainability. It incorporates a responsive design, ensuring optimal user experience across devices. The focus on component reusability and clear structure enhances both the performance and future development of the project.',
     technologies: ['Javascript', 'React', 'Bootstrap'],
     githubLink: 'https://github.com/francoparavan/landing-page',
-    liveLink: 'https://authapp.com',
     imageSrc: landingpage
   }
 ];
@@ -71,9 +67,6 @@ const Projects = () => {
                 <div className="project-icons">
                   <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                     <i className="fa-brands fa-github"></i>
-                  </a>
-                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                    <i className="bi bi-box-arrow-up-right"></i>
                   </a>
                 </div>
               </div>

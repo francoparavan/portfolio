@@ -22,7 +22,7 @@ h2 {
   justify-content: space-between;
   text-align: center;
   margin: 0 auto;
-  width: 70%;  /* Mantiene el ancho de antes */
+  width: 70%;  
   max-width: 550px; /* Define un ancho máximo para pantallas grandes */
 }
 

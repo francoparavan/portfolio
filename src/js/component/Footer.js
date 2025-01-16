@@ -4,7 +4,7 @@ import '../../styles/footer.css';
 const Footer = () => {
   return (
     <footer>
-      <p>© 2025</p>
+      <p>© 2025 Franco.dev</p>
     </footer>
   );
 };

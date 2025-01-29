@@ -67,14 +67,14 @@ h2 {
 }
 
 .project-icons i {
-  font-size: 21px;
+  font-size: 22px;
   color: #ffffff;
   cursor: pointer;
   vertical-align: baseline;
 }
 
 .project-icons i:hover {
-  animation: pulse 1.1s infinite;
+  animation: pulse 1.3s infinite;
 }
 
 .project-details p {
